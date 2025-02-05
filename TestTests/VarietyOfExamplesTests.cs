@@ -27,5 +27,23 @@ namespace Test.Tests
             // Assert
             Assert.IsTrue(result);
         }
+
+        [TestMethod()]
+        [DataRow(2001)]
+        [DataRow(2003)]
+        [DataRow(1900)]
+        [DataRow(2100)]
+        [DataRow(2002)]
+        public void IsLeapYear_ValidNonLeapYear_ReturnsFalse(int yearToTest)
+        {
+            // Arrange
+
+            // Act
+            VarietyOfExamples varietyOfExamples = new VarietyOfExamples();
+            bool result = varietyOfExamples.IsLeapYear(yearToTest);
+
+            // Assert
+            Assert.IsFalse(result);
+        }
     }
 }
